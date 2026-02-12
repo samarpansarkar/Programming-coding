@@ -1,0 +1,13 @@
+
+function revStr(str){
+  let rev="";
+  
+  for (var i = str.length-1;i>=0; i-- ) {
+    rev=rev+str[i];
+  }
+  return rev;
+}
+
+let res= revStr("Hello!!");
+
+console.log(res)
