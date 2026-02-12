@@ -1,0 +1,25 @@
+function chunkArray(arr,size){
+    let arr2=[];
+    let chunk = [];
+    let cIndex=0;
+
+    for(let char in arr){
+        chunk[cIndex]=arr[char];
+        cIndex++;
+
+        if(cIndex===size){
+            arr2[arr2.length]=chunk;
+            chunk=[];
+            cIndex=0;
+        }
+    }
+    if(cIndex>0){
+        arr2[arr2.length]=chunk;
+    }
+    return arr2;
+}
+
+
+let res = chunkArray([1,2,3,4,5,6,7,8,9,10,11,12,14,13],3);
+
+console.log(res);
