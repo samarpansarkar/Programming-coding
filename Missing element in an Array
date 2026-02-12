@@ -1,0 +1,18 @@
+function missingArray(arr){
+    let n = arr.length+1;
+    let expectedSun = (n*(n+1))/2;
+
+
+    let actualSun=0;
+
+    for(let i=0;i<arr.length;i++){
+        actualSun+=arr[i];
+    }
+
+    let missing=expectedSun-actualSun;
+    return missing;
+}
+
+let res = missingArray([1,2,3,5,6]);
+
+console.log(res);
